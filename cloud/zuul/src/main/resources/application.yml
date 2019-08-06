@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: zuul
+server:
+  port: 8000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+#zuul:
+#  thread-pool:
+#    use-separate-thread-pools: true
+#  ribbon-isolation-strategy: thread
+
+logging:
+  level:
+    org.springframework.cloud.netflix.zuul: debug
+zuul:
+  semaphore:
+    max-semaphores: 2000
