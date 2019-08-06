@@ -1,6 +1,6 @@
 # [PoC] Redis Counter
 
-Redis의 atomic operation을 이용하여 Atomic Counter 구현을 검증하기 위한 프로젝트
+Redis 기반의 Atomic Counter 구현 API를 검증하기 위한 프로젝트
 
 ## 구성 
 
@@ -10,11 +10,11 @@ Redis의 atomic operation을 이용하여 Atomic Counter 구현을 검증하기 
 - zuul: Gateway 서버. 사용자 트래픽을 받아서 여러 대의 API 서버로 라우팅
 - gatling: 부하 테스트 도구. 사용자 트래픽을 발생해서 응답 결과를 리포팅
 
-## REST API 규격
+## Atomic Counter REST API 규격
 
 ### Request 
 
-> GET /couter HTTP/1.1
+> GET /counter HTTP/1.1
 
 ### Response
 
